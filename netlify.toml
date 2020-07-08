@@ -1,0 +1,8 @@
+[build]
+  command = "yarn build"
+  functions = "api/functions"
+  publish = "dist"
+
+[[redirects]]
+  from = "/r/*"
+  to = "/.netlify/functions/replace_html?url=:splat"
