@@ -11,7 +11,9 @@ const modalStyle = `
     top: 0;
     width: 100vw;
     height: 100vh;
+    color: #000;
     background-color: #fff;
+    font-family: sans-serif;
   }
 </style>
 `;
