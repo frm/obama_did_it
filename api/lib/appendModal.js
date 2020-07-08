@@ -34,7 +34,7 @@ const modalScript = `
 <script>
   setTimeout(function() {
     document.getElementsByClassName("modal")[0].style.display = "block";
-  }, 7000);
+  }, 20000);
 </script>
 `;
 
