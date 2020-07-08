@@ -11,9 +11,18 @@ const modalStyle = `
     top: 0;
     width: 100vw;
     height: 100vh;
-    color: #000;
     background-color: #fff;
+    overflow-y: scroll;
+  }
+
+  .modal p {
+    color: #000;
     font-family: sans-serif;
+  }
+
+  .modal a {
+    color: blue;
+    text-decoration: underline;
   }
 </style>
 `;
