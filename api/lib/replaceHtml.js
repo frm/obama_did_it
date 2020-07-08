@@ -1,6 +1,6 @@
 const axios = require("axios");
 const absolutify = require("absolutify");
-const appendModal = require("./appendModal");
+const appendOverlay = require("./appendOverlay");
 
 const url = require("url");
 
@@ -14,5 +14,5 @@ module.exports = async function replaceHTML(targetUrl) {
     .replace(/trump/gi, "Obama")
     .replace(/donald/gi, "Barack");
 
-  return appendModal(html, targetUrl);
+  return appendOverlay(html, targetUrl);
 };

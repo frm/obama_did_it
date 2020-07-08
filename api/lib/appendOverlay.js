@@ -1,8 +1,8 @@
 const cheerio = require("cheerio");
 
-const modalStyle = `
+const overlayStyle = `
 <style>
-  .modal {
+  .overlay {
     display: none;
     position: fixed;
     z-index: 99;
@@ -15,44 +15,43 @@ const modalStyle = `
     overflow-y: scroll;
   }
 
-  .modal p {
+  .overlay p {
     color: #000;
     font-family: sans-serif;
   }
 
-  .modal a {
+  .overlay a {
     color: blue;
     text-decoration: underline;
   }
 </style>
 `;
 
-const modalMarkup = (url) => `
-<div class="modal">
+const overlayMarkup = (url) => `
+<div class="overlay">
   <p>Feeling outraged? Think again!</p>
   <p>This article was originally written about Trump.</p>
   <br/>
   <p>ObamaDidIt is a website that replaces the word "Trump" with the word "Obama".</p>
-  <p>If this outraged you, you should reflect on your own biases.</p>
-  <br />
-  <p>See for yourself. Find the original at <a href="${url}">${url}</a></p>
+  <br/>
+  <p>If this outraged you, make sure the real article also does: <a href="${url}">${url}</a></p>
 </div>
 `;
 
-const modalScript = `
+const overlayScript = `
 <script>
   setTimeout(function() {
-    document.getElementsByClassName("modal")[0].style.display = "block";
+    document.getElementsByClassName("overlay")[0].style.display = "block";
   }, 20000);
 </script>
 `;
 
-module.exports = async function appendModal(html, url) {
+module.exports = async function appendOverlay(html, url) {
   const $ = cheerio.load(html);
 
-  $("body").append(modalMarkup(url));
-  $("body").append(modalScript);
-  $("body").append(modalStyle);
+  $("body").append(overlayMarkup(url));
+  $("body").append(overlayScript);
+  $("body").append(overlayStyle);
 
   return $.html();
 };
