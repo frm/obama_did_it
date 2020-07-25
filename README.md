@@ -34,7 +34,7 @@ most people don't get past the headline or the first paragraph.**
 Feel free to make a pull request or an issue. Current TODOs:
 
 - [ ] Swap Mike Pence with Joe Biden
-- [ ] Make the swap both ways. e.g: "Trump criticises Obama" becomes "Obama
+- [x] Make the swap both ways. e.g: "Trump criticises Obama" becomes "Obama
   criticises Trump"
 
 [reddit-thread]: https://old.reddit.com/r/worldnews/comments/hnh13d/trump_pushed_cia_to_give_intelligence_to_kremlin/fxbmblb/?context=10000
