@@ -32,7 +32,7 @@ const overlayMarkup = (url) => `
   <p>Feeling outraged? Think again!</p>
   <p>This article was originally written about Trump.</p>
   <br/>
-  <p>ObamaDidIt is a website that replaces the word "Trump" with the word "Obama".</p>
+  <p>ObamaDidIt is a website that swaps "Donald Trump" with "Barack Obama".</p>
   <br/>
   <p>If this outraged you, make sure the real article also does: <a href="${url}">${url}</a></p>
 </div>
