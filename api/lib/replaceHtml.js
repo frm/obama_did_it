@@ -21,7 +21,8 @@ module.exports = async function replaceHTML(targetUrl) {
     .replace(/donald/gi, "Barack")
     .replace(/trump/gi, "Obama")
     .replace(new RegExp(barack, "g"), "Donald")
-    .replace(new RegExp(obama, "g"), "Trump");
+    .replace(new RegExp(obama, "g"), "Trump")
+    .replace(/(Barack)\s+J\.?\s+(Obama)/g, "$1 $2");
 
   return appendOverlay(html, targetUrl);
 };
